@@ -12,11 +12,9 @@ import org.apache.commons.logging.LogFactory;
 
 import com.topcoder.farm.client.ClientControllerLocator;
 import com.topcoder.farm.controller.api.ClientControllerNode;
-import com.topcoder.farm.controller.api.InvocationRequest;
 import com.topcoder.farm.controller.api.InvocationResponse;
 import com.topcoder.farm.controller.exception.ClientNotListeningException;
 import com.topcoder.farm.controller.exception.DuplicatedIdentifierException;
-import com.topcoder.farm.controller.exception.InvalidRequirementsException;
 import com.topcoder.farm.controller.exception.NotAllowedToRegisterException;
 import com.topcoder.farm.controller.exception.SharedObjectReferencedException;
 import com.topcoder.farm.controller.exception.UnregisteredClientException;
@@ -26,6 +24,7 @@ import com.topcoder.farm.shared.invocation.InvocationFeedback;
  * @author Diego Belfer (mural)
  * @version $Id$
  */
+@Deprecated
 public class ClientNodeImpl implements ClientNode {
     private Log log;
     private String id;
@@ -106,10 +105,10 @@ public class ClientNodeImpl implements ClientNode {
         }
     }
 
-    public void scheduleInvocation(InvocationRequest request) throws InvalidRequirementsException, DuplicatedIdentifierException  {
-        log.debug("scheduleInvocation");
-        getController().scheduleInvocation(id, request);
-    }
+//    public void scheduleInvocation(InvocationRequest request) throws InvalidRequirementsException, DuplicatedIdentifierException  {
+//        log.debug("scheduleInvocation");
+//        getController().scheduleInvocation(id, request);
+//    }
 
     public Integer countPendingRequests() {
         log.debug("countPendingRequests");

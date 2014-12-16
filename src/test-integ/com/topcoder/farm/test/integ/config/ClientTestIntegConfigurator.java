@@ -5,13 +5,6 @@
  */
 package com.topcoder.farm.test.integ.config;
 
-import java.net.UnknownHostException;
-
-import com.topcoder.farm.client.invoker.FarmFactory;
-import com.topcoder.farm.client.invoker.InvalidConfigurationException;
-import com.topcoder.farm.client.util.FarmFactoryProvider;
-import com.topcoder.farm.test.integ.IntegConstants;
-
 /**
  * Configures the FarmFactory to be used for Integration
  * Test.
@@ -25,17 +18,17 @@ import com.topcoder.farm.test.integ.IntegConstants;
  * @version $Id$
  */
 public class ClientTestIntegConfigurator {
-
-    /**
-     * Configures the FarmFactorty
-     * 
-     * @throws InvalidConfigurationException
-     * @throws UnknownHostException
-     */
-    public static void configure() throws InvalidConfigurationException, UnknownHostException {
-        if (!FarmFactory.isConfigured()) {
-            FarmFactoryProvider.getConfiguredFarmFactory();
-        }
-    }
+//
+//    /**
+//     * Configures the FarmFactorty
+//     * 
+//     * @throws InvalidConfigurationException
+//     * @throws UnknownHostException
+//     */
+//    public static void configure() throws InvalidConfigurationException, UnknownHostException {
+//        if (!FarmFactory.isConfigured()) {
+//            FarmFactoryProvider.getConfiguredFarmFactory();
+//        }
+//    }
 
 }
